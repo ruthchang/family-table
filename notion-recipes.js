@@ -1373,5 +1373,146 @@ window.FAMILY_TABLE_NOTION_RECIPES = [
     "steps": "Whisk 1 cup milk, 1 egg, 2 tbsp melted butter and 1 tsp vanilla. Separately combine 1½ cups flour, 3 tbsp dark brown sugar, 1 tbsp baking powder and ½ tsp salt. Fold wet into dry with 2 mashed bananas; don't overmix. Cook ½-cup portions on a medium-low skillet until bubbles appear, flip, and cook until golden.",
     "variation": "Good for cooking together.",
     "notes": "Breakfast recipe, not a dinner. Saved Notion version uses slightly chunky mashed bananas.\nNotion source: https://app.notion.com/p/27ae48478ba34acb8b4f2908fd4a77b1"
+  },
+  {
+    "id": "notion-396cee7b",
+    "name": "Moussaka (Greek Eggplant Casserole)",
+    "time": 120,
+    "rating": 5,
+    "tried": false,
+    "kid": true,
+    "protein": true,
+    "fiber": true,
+    "ingredients": [
+      {
+        "qty": 2,
+        "unit": "",
+        "name": "large eggplants",
+        "section": "Produce",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 0.25,
+        "unit": "cup",
+        "name": "breadcrumbs",
+        "section": "Pantry",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 1,
+        "unit": "",
+        "name": "large yellow onion",
+        "section": "Produce",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 1,
+        "unit": "lb",
+        "name": "ground beef",
+        "section": "Meat",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 1,
+        "unit": "tbsp",
+        "name": "dried oregano",
+        "section": "Pantry",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 1,
+        "unit": "tsp",
+        "name": "ground cinnamon",
+        "section": "Pantry",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 0.5,
+        "unit": "tsp",
+        "name": "black pepper",
+        "section": "Pantry",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 0.75,
+        "unit": "tsp",
+        "name": "ground nutmeg",
+        "section": "Pantry",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 0.5,
+        "unit": "tsp",
+        "name": "paprika",
+        "section": "Pantry",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 0.5,
+        "unit": "cup",
+        "name": "red wine",
+        "section": "Other",
+        "store": "Other"
+      },
+      {
+        "qty": 14,
+        "unit": "oz",
+        "name": "diced tomatoes",
+        "section": "Canned",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 1,
+        "unit": "tsp",
+        "name": "sugar",
+        "section": "Pantry",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 0.5,
+        "unit": "cup",
+        "name": "beef broth",
+        "section": "Pantry",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 0.46,
+        "unit": "cup",
+        "name": "olive oil",
+        "section": "Pantry",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 0.67,
+        "unit": "cup",
+        "name": "all-purpose flour",
+        "section": "Pantry",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 0.5,
+        "unit": "tsp",
+        "name": "salt",
+        "section": "Pantry",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 4,
+        "unit": "cups",
+        "name": "2% milk",
+        "section": "Dairy",
+        "store": "Trader Joe's"
+      },
+      {
+        "qty": 2,
+        "unit": "",
+        "name": "eggs",
+        "section": "Dairy",
+        "store": "Trader Joe's"
+      }
+    ],
+    "steps": "1. Slice 2 large eggplants into ¼-inch slabs, salt lightly and rest 30 minutes. Pat dry. Brush with olive oil and broil on both sides until golden, watching closely. 2. In 2 tbsp olive oil, soften 1 chopped onion and brown 1 lb ground beef. Stir in 1 tbsp oregano, 1 tsp cinnamon, ½ tsp pepper, ½ tsp nutmeg and ½ tsp paprika. Add ½ cup red wine, simmer 1 minute, then add 14 oz diced tomatoes, 1 tsp sugar and ½ cup beef broth. Simmer 20–30 minutes. 3. For béchamel, warm 4 cups milk. Heat ⅓ cup plus 2 tbsp olive oil, whisk in ⅔ cup flour, ½ tsp salt and pepper; gradually whisk in warm milk. Cook 5–7 minutes until thick; add ¼ tsp nutmeg. Temper 2 beaten eggs with some hot sauce, whisk back in, and gently cook 2 minutes. 4. Heat oven to 350°F. In a 9×13-inch baking dish layer half the eggplant, all meat sauce, remaining eggplant, then béchamel. Sprinkle ¼ cup breadcrumbs. Bake 45 minutes; rest 10 minutes before slicing.",
+    "variation": "Mild spices are already kid-friendly; serve eggplant and meat sauce separately for Ethan if he prefers. Optional potatoes are a variation, not part of this saved source recipe.",
+    "notes": "Notion rating: 5; status: Not started (so tried is not assumed). Your Notion page links to the source but has no copied recipe text. Ingredients and steps were adapted from the linked original. Plan for ~2 hours total; eggplant and meat sauce can be made ahead. Eggplants: 2 large, matching your shopping list. Olive oil for brushing eggplant is additional, amount unspecified; ⅓ cup + 2 tbsp is for béchamel and 2 tbsp for meat sauce. Red wine is in the original recipe; substitute only if you choose to. Original: https://www.themediterraneandish.com/moussaka-recipe-eggplant-casserole/\nNotion source: https://app.notion.com/p/396cee7bf7bc8062b6e4c694bb0b5f72"
   }
 ];
