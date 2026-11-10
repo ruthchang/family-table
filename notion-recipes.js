@@ -478,7 +478,7 @@
     ],
     "steps": "At 425°F, coat 2 lb halved Brussels sprouts in 3 tbsp olive oil, ½ tsp salt and ¼ tsp pepper. Roast spread out for 20–25 minutes, turning once. Add ¼ cup maple syrup and roast 5–8 minutes more until glazed. Optional red pepper flakes and hazelnuts can be added separately.",
     "variation": "Leave out optional chili flakes for Ethan.",
-    "notes": "Rated 5; your preferred Brussels sprouts version. Optional toppings are not included in the grocery list. Side dish, not a complete dinner.\nNotion source: https://app.notion.com/p/3d2cee7bf7bc81b0a958de05220c7420"
+    "notes": "Rated 5; your preferred Brussels sprouts version. Optional toppings are not included in the grocery list. Side dish, not a complete dinner.\nNotion source: https://app.notion.com/p/3d2cee7bf7bc818a9406d6728c6da46b"
   },
   {
     "id": "notion-410cee7b",
