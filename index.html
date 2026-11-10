@@ -10,6 +10,7 @@
 <section id="settings" hidden><h2>Data & backup</h2><div class="panel"><p>Your edits stay in this browser. GitHub Pages does not sync them across devices. Export regularly to preserve your recipes and plans.</p><div class="row"><button class="primary" id="export">Export JSON backup</button><label class="button" for="importFile">Import JSON backup</label><input id="importFile" type="file" accept=".json,application/json" hidden></div><hr><h3>Ingredients on hand</h3><p class="muted">Enter pantry ingredients separated by commas. The recipe filter will show recipes that use at least one of them.</p><textarea id="pantry" placeholder="rice, soy sauce, frozen peas"></textarea><button id="savePantry">Save pantry</button><hr><h3>Shopping preferences</h3><p class="muted">Each ingredient can have a preferred store and section in its recipe. Defaults are used for common pantry items.</p><button id="resetData" class="danger">Reset to starter recipes</button></div></section>
 <dialog id="editor" style="border:1px solid #dce3d7;border-radius:14px;max-width:min(700px,95vw);width:100%;max-height:90vh;overflow:auto"><form id="recipeForm"><h2 id="editorTitle">Recipe</h2><input type="hidden" id="recipeId"><label>Name<input id="recipeName" required style="width:100%"></label><div class="grid"><label>Time (minutes)<input id="recipeTime" type="number" min="1" max="500" required style="width:100%"></label><label>Rating (0–5)<input id="recipeRating" type="number" min="0" max="5" step="1" style="width:100%"></label></div><div class="row"><label><input id="recipeKid" type="checkbox"> Ethan-friendly</label><label><input id="recipeTried" type="checkbox"> Tried</label><label><input id="recipeFiber" type="checkbox"> Fiber focus</label><label><input id="recipeProtein" type="checkbox"> Protein focus</label></div><label>Ingredients — one per line: amount | unit | ingredient | store | section<textarea id="recipeIngredients" rows="8" required placeholder="1 | lb | ground pork | Trader Joe's | Meat"></textarea></label><label>Instructions (include amounts inline)<textarea id="recipeSteps" rows="7"></textarea></label><label>Kid-friendly variation<textarea id="recipeVariation" rows="3"></textarea></label><label>Substitutions and cooking notes<textarea id="recipeNotes" rows="3"></textarea></label><div class="row"><button type="submit" class="primary">Save recipe</button><button type="button" id="cancelEditor">Cancel</button><button type="button" id="deleteRecipe" class="danger right">Delete</button></div></form></dialog>
 <footer>Family Table · Local-first meal planning · Back up your data before switching devices</footer></main>
+<script src="notion-recipes.js"></script>
 <script>
 const KEY='family-table-v1',days=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
 const I=(qty,unit,name,store="Trader Joe's",section="Pantry")=>({qty,unit,name,store,section});
@@ -24,6 +25,21 @@ const starters=[
 ];
 function defaults(){return {recipes:starters,plan:Array(7).fill(''),pantry:'rice, soy sauce, garlic',checked:{}}}
 let state;try{state=JSON.parse(localStorage.getItem(KEY))||defaults();if(!Array.isArray(state.recipes)||!Array.isArray(state.plan))throw Error()}catch{state=defaults()}
+function mergeNotionRecipes(){
+ const incoming=window.FAMILY_TABLE_NOTION_RECIPES||[];
+ if(!incoming.length)return;
+ const original=defaults().recipes;
+ const replacements={pork:'notion-3d8cee7b',mapo:'notion-3becee7b',casserole:'notion-404e04ef',chowmein:'notion-3c1cee7b',soup:'notion-410cee7b',brussels:'notion-3d2cee7b'};
+ const removeIds=new Set();
+ for(const [id,newId] of Object.entries(replacements)){
+  const current=state.recipes.find(r=>r.id===id),seed=original.find(r=>r.id===id);
+  if(current&&seed&&JSON.stringify(current)===JSON.stringify(seed)){removeIds.add(id);state.plan=state.plan.map(x=>x===id?newId:x)}
+ }
+ state.recipes=state.recipes.filter(r=>!removeIds.has(r.id));
+ for(const r of incoming){if(!state.recipes.some(x=>x.id===r.id))state.recipes.push(r)}
+ localStorage.setItem(KEY,JSON.stringify(state));
+}
+mergeNotionRecipes();
 function save(){localStorage.setItem(KEY,JSON.stringify(state))}
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function tab(t){document.querySelectorAll('main section').forEach(s=>s.hidden=s.id!==t);document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===t));if(t==='groceries')renderGroceries();if(t==='plan')renderPlan()}
