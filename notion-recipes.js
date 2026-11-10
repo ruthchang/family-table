@@ -1,4 +1,5 @@
-// Curated Notion recipe imports. Sources and user notes retained.\nwindow.FAMILY_TABLE_NOTION_RECIPES = [
+// Curated Notion recipe imports. Sources and user notes retained.
+window.FAMILY_TABLE_NOTION_RECIPES = [
   {
     "id": "notion-3d8cee7b",
     "name": "Taiwanese Minced Pork Rice",
